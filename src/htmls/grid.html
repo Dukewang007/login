@@ -1,0 +1,82 @@
+<script type="text/template" id="tpl-rem">
+    <div class="grid-table">
+        <h2>Basic Window</h2>
+		<p>Window can be dragged freely on screen.</p>
+		<div style="margin:20px 0;">
+			<a href="javascript:void(0)" class="easyui-linkbutton l-btn lbtn-small" onclick="$('#w').window('open')">Open</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#w').window('close')">Close</a>
+		</div>
+		<div id="w" class="easyui-window" title="Basic Window" data-options="iconCls:'icon-save'" style="width:500px;height:200px;padding:10px;">
+			The window content.
+		</div>
+
+				 
+
+		<h1>组合框</h1>
+		<select id="cc" class="easyui-combobox" name="dept" style="width:200px;">
+	    <option value="aa">aitem1</option>
+	    <option>bitem2</option>
+	    <option>bitem3</option>
+	    <option>ditem4</option>
+	    <option>eitem5</option>
+		</select>
+		<input id="cc" class="easyui-combobox" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'">
+		<br><br>
+		<!-- 基础数据表格 -->
+		<h1>基础数据表格</h1>
+		<table id="dg1"></table>
+	      
+		<br><br><br>
+		<table id="dg2"></table>
+		<!-- <table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
+				data={"firstname":5555}
+				toolbar="#toolbar"
+				rownumbers="true" fitColumns="true" singleSelect="true">
+			<thead>
+				<tr>
+					<th field="firstname" width="50">First Name</th>
+					<th field="lastname" width="50">Last Name</th>
+					<th field="phone" width="50">Phone</th>
+					<th field="email" width="50">Email</th>
+				</tr>
+			</thead>
+		</table>
+		<div id="toolbar">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
+		</div>	 -->
+		<div id="toolbar">
+			<a href="javascript:;" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
+			<a href="javascript:;" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
+			<a href="javascript:;" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
+		</div>
+		<br><br><br><br>
+		<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+				closed="true" buttons="#dlg-buttons">
+			<div class="ftitle">User Information</div>
+			<form id="fm" method="post">
+				<div class="fitem">
+					<label>First Name:</label>
+					<input name="firstname" class="easyui-validatebox" required="true">
+				</div>
+				<div class="fitem">
+					<label>Last Name:</label>
+					<input name="lastname" class="easyui-validatebox" required="true">
+				</div>
+				<div class="fitem">
+					<label>Phone:</label>
+					<input name="phone">
+				</div>
+				<div class="fitem">
+					<label>Email:</label>
+					<input name="email" class="easyui-validatebox" validType="email">
+				</div>
+			</form>
+		</div>
+		<div id="dlg-buttons">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">Save</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
+		</div>
+    </div>
+</script>

@@ -1,0 +1,61 @@
+
+<table class="table">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="3"></td>
+    <td colspan="2"></td>
+    
+  </tr>
+  <tr>
+    
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="3"></td>
+    <td colspan="2"></td>
+    
+  </tr>
+  <tr>
+    <td ></td>
+    <td rowspan="2"></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<script type="text/template" id="tpl-qdtest">
+  <div class="qdtest">
+    <ul>
+      <h1>程序员信息</h1>
+        {@each programmers as item}
+          <li><span>姓名：${item.firstName}&nbsp;${item.lastName}</span><span>邮箱：${item.email}</span></li>
+        {@/each}
+    </ul>
+    <ul>
+      <h1>作家信息</h1>
+        {@each authors as item}
+          <li><span>姓名：${item.firstName}&nbsp;${item.lastName}</span><span>风格：${item.genre}</span></li>
+        {@/each}
+    </ul>
+    <ul>
+      <h1>音乐家信息</h1>
+        {@each musicians as item}
+          <li><span>姓名：${item.firstName}&nbsp;${item.lastName}</span><span>乐器：${item.instrument}</span></li>
+        {@/each}
+    </ul>
+
+
+    
+  </div>
+</script>
+  
+    
